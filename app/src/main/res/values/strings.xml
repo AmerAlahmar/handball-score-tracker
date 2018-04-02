@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">HandBall Score Tracker</string>
+    <string name="resetGame">Reset Gmae</string>
+    <string name="team1">Team A</string>
+    <string name="team2">Team B</string>
+    <string name="total_scores">: Total Scores :</string>
+    <string name="penalty_scores">: Penalty Scores :</string>
+    <string name="fouls">: Fouls :</string>
+    <string name="plus1Score">+1 Score</string>
+    <string name="plus1PenaltyScore">+1 P Score</string>
+    <string name="plus1Foul">+1 Foul</string>
+    <string name="minusOne">-1</string>
+    <string name="gameEnded">Game Ended</string>
+    <string name="vs">VS</string>
+    <string name="zero">0</string>
+    <string name="whoIsPlaying">Who\'s Playing?</string>
+    <string name="startGame">Start The Game</string>
+    <string name="enterTeam1">Enter 1st Team</string>
+    <string name="enterTeam2">Enter 2nd Team</string>
+    <string name="handBallLogo">HandBallLogo</string>
+    <string name="winnerTeam">Winner Team</string>
+    <string name="isTheWinner">Is The Winner  !</string>
+    <string name="restartApp">Restart</string>
+
+</resources>
