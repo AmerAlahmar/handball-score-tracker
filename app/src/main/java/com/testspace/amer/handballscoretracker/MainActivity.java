@@ -10,37 +10,56 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    ///////////////////Declaring Views And Variables/////////////////////
+///////////////////Declaring Views And Variables/////////////////////
 /////////////////////////////View//////////////////////////////////
-    LinearLayout welcomeLinearLayout, mainScoreLinearLayout, winnerLinearLayout;
-
-    TextView team1NameTextView, team2NameTextView,
-            team1TotalScoreTextView, team2TotalScoreTextView,
-            team1PenaltyScoreTextView, team2PenaltyScoreTextView,
-            team1FoulsTextView, team2FoulsTextView,
-            winnerTeamTextView, winnerPhraseTextView;
-    Button startTheGameButton,
-            teamAPlus1ScoreButton, teamBPlus1ScoreButton,
-            teamAPlus1PenaltyScoreButton, teamBPlus1PenaltyScoreButton,
-            teamAPlus1FoulButton, teamBPlus1FoulButton,
-            teamAMinus1ScoreButton, teamBMinus1ScoreButton,
-            teamAMinus1PenaltyScoreButton, teamBMinus1PenaltyScoreButton,
-            teamAMinus1FoulButton, teamBMinus1FoulButton,
-            endGameButton, resetScoreButton,
-            restartAppButton;
-    EditText team1NameEditText, team2NameEditText;
+    LinearLayout welcomeLinearLayout;
+    LinearLayout mainScoreLinearLayout;
+    LinearLayout winnerLinearLayout;
+    TextView team1NameTextView;
+    TextView team2NameTextView;
+    TextView team1TotalScoreTextView;
+    TextView team2TotalScoreTextView;
+    TextView team1PenaltyScoreTextView;
+    TextView team2PenaltyScoreTextView;
+    TextView team1FoulsTextView;
+    TextView team2FoulsTextView;
+    TextView winnerTeamTextView;
+    TextView winnerPhraseTextView;
+    Button startTheGameButton;
+    Button teamAPlus1ScoreButton;
+    Button teamBPlus1ScoreButton;
+    Button teamAPlus1PenaltyScoreButton;
+    Button teamBPlus1PenaltyScoreButton;
+    Button teamAPlus1FoulButton;
+    Button teamBPlus1FoulButton;
+    Button teamAMinus1ScoreButton;
+    Button teamBMinus1ScoreButton;
+    Button teamAMinus1PenaltyScoreButton;
+    Button teamBMinus1PenaltyScoreButton;
+    Button teamAMinus1FoulButton;
+    Button teamBMinus1FoulButton;
+    Button endGameButton;
+    Button resetScoreButton;
+    Button restartAppButton;
+    EditText team1NameEditText;
+    EditText team2NameEditText;
     ///////////////////////Variables////////////////////////////////////
-    String team1Name = "", team2Name = "", drawPhrase = "DRAW", winnerTeamOriginal = "Winner Team", winnerPhraseOriginal = "Is The Winner  !";
-    int team1TotalScore = 0, team2TotalScore = 0,
-            team1PenaltyScore = 0, team2PenaltyScore = 0,
-            team1Fouls = 0, team2Fouls = 0;
+    String team1Name = "";
+    String team2Name = "";
+    String drawPhrase = "DRAW";
+    String winnerTeamOriginal = "Winner Team";
+    String winnerPhraseOriginal = "Is The Winner  !";
+    int team1TotalScore = 0;
+    int team2TotalScore = 0;
+    int team1PenaltyScore = 0;
+    int team2PenaltyScore = 0;
+    int team1Fouls = 0;
+    int team2Fouls = 0;
 ///////////////////////////////////////////////////////////////////
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //////////////////////////////Connecting View with ids///////////////////////////////////
         ///////////////////////////////////////LayOuts///////////////////////////////////////////
         welcomeLinearLayout = findViewById(R.id.welcomeLinearLayout);
@@ -241,14 +260,12 @@ public class MainActivity extends AppCompatActivity {
                 team2PenaltyScore = 0;
                 team1Fouls = 0;
                 team2Fouls = 0;
-
                 team1TotalScoreTextView.setText(String.valueOf(team1TotalScore));
                 team2TotalScoreTextView.setText(String.valueOf(team2TotalScore));
                 team1PenaltyScoreTextView.setText(String.valueOf(team1PenaltyScore));
                 team2PenaltyScoreTextView.setText(String.valueOf(team2PenaltyScore));
                 team1FoulsTextView.setText(String.valueOf(team1Fouls));
                 team2FoulsTextView.setText(String.valueOf(team2Fouls));
-
                 Toast.makeText(MainActivity.this, "Game Restarted", Toast.LENGTH_LONG).show();
             }
         });
@@ -284,10 +301,8 @@ public class MainActivity extends AppCompatActivity {
                 team2PenaltyScore = 0;
                 team1Fouls = 0;
                 team2Fouls = 0;
-
                 team1Name = "Team A";
                 team1Name = "Team B";
-
                 team1TotalScoreTextView.setText(String.valueOf(team1TotalScore));
                 team2TotalScoreTextView.setText(String.valueOf(team2TotalScore));
                 team1PenaltyScoreTextView.setText(String.valueOf(team1PenaltyScore));
@@ -298,23 +313,17 @@ public class MainActivity extends AppCompatActivity {
                 team2NameTextView.setText(team2Name);
                 winnerTeamTextView.setText(winnerTeamOriginal);
                 winnerPhraseTextView.setText(winnerPhraseOriginal);
-
                 winnerPhraseTextView.setVisibility(View.VISIBLE);
                 welcomeLinearLayout.setVisibility(View.VISIBLE);
                 mainScoreLinearLayout.setVisibility(View.GONE);
                 winnerLinearLayout.setVisibility(View.GONE);
                 //////////////////////////////////////////////////////////////////////////
-
             }
         });
         //>>>>>//////////////////////////////////////////////////////////////////////<<<<<//
-
-
     }
-
     private boolean isEditTextEmpty(EditText editText) {
         String text = editText.getText().toString();
         return text.isEmpty();
     }
-
 }
